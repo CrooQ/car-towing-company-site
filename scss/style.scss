@@ -5,18 +5,18 @@
 @import '_variables.scss';
 
 
-.logo{
-    height: 50px;
-    width: 150px;
+/* Background Video */
+
+html, body{
+    min-height: 100%;
 }
 
 .marginBottom-0{
     margin-bottom :0;
 }
 
-/* Background Video */
-
 .background-video {
+    width: 100%;
     border-right: none;
     border-left: none;
     position: relative;
@@ -41,6 +41,9 @@
 .video-container .poster img {
     width: 100%;
     bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
     position: absolute;
 }
 .video-container .filter {
@@ -58,7 +61,7 @@
     color: #fff;
 }
 .video-container .description .inner {
-    font-size: 1em;
+    font-size: 1.5em;
     width: 45%;
     margin: 0 auto;
 }
@@ -79,7 +82,143 @@
     z-index: 0;
     bottom: 0;
 }
-.video-container video.fillWidth {
+.video-container video.fillWidth, carousel-inner{
     width: 100%;
 }
 
+.headline h1{
+    font-size: 3em;
+}
+
+// ===========================================
+
+/* Carousel HEADER */
+
+.carousel {
+    margin-bottom: 60px;
+}
+
+.carousel .container-carousel {
+    position: relative;
+    z-index: 9;
+}
+
+.carousel-control {
+    height: 80px;
+    margin-top: 0;
+    font-size: 8em;
+    text-shadow: 0 1px 1px rgba(0,0,0,.4);
+    background-color: transparent;
+    border: 0;
+    z-index: 10;
+}
+
+.carousel .item {
+    height: 500px;
+}
+
+.carousel-caption {
+    background-color: transparent;
+    position: static;
+    max-width: 550px;
+    padding: 0 20px;
+    margin: 0 auto;
+    margin-top: 0px;
+}
+.carousel-caption h1,
+.carousel-caption .lead {
+    margin: 0;
+    line-height: 1.25;
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(0,0,0,.4);
+}
+.carousel-caption .btn {
+    margin-top: 10px;
+}
+
+//========================================
+
+/* Section with text */
+
+section .container{
+    padding: 35px;
+}
+
+.section-title{
+    
+    span{
+        font-size: 0.8em;
+        color: $color-primary-0;
+    }
+    
+}
+
+.letter-spacing{
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+
+#parallelogram {
+    background-color: $color-primary-1;
+    width: 5000px;
+    min-height: 100%;
+    -webkit-transform: skew(135deg);
+    -moz-transform: skew(135deg);
+    -o-transform: skew(135deg);
+    position: absolute;
+    right: 50%;
+    top: 100%;
+    z-index: -9999999;
+}
+
+/* Footer */
+
+.footer-background{
+    padding: 25px;
+    background-color: $color-primary-4;
+}
+
+.logo-footer{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 250px;
+    height: 200px;
+    
+    margin-left: -125px;
+}
+
+.col-contact, .col-adress{
+    color: azure;
+    text-align: center;
+    
+    p{
+        font-size: 1.3em;
+    }
+    
+    span{
+        color: $color-primary-2;
+    }
+}
+
+// ========================================
+
+/* Section with clinks-carousel */
+
+
+
+
+// ========================================
+
+/* Copyrights */
+
+.copyright-bgn{
+    height: 50px;
+    background-color: #1d1d1d;
+    
+    p{
+        line-height: 50px;
+        color: $color-primary-2;
+        margin: 0;
+    }
+}
