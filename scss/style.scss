@@ -5,11 +5,26 @@
 @import '_variables.scss';
 
 
-/* Background Video */
-
 html, body{
-    min-height: 100%;
+    height: 100%;
 }
+
+.logo{
+    position: relative;
+    top: 5px;
+    width: 110px;
+    height: 40px;
+}
+
+.blue-text{
+    color: $color-primary-2;
+}
+
+.sans-font{
+    font-family: sans-serif;
+}
+
+/* Background Video */
 
 .marginBottom-0{
     margin-bottom :0;
@@ -203,12 +218,6 @@ section .container{
 
 // ========================================
 
-/* Section with clinks-carousel */
-
-
-
-
-// ========================================
 
 /* Copyrights */
 
@@ -222,3 +231,30 @@ section .container{
         margin: 0;
     }
 }
+
+/* Gallery */
+
+
+.gallery{
+    .img-responsive{
+
+        margin-top: 25px;
+        -webkit-filter: grayscale(80%); /* Safari */
+        filter: grayscale(80%);
+    }
+
+    .img-responsive:hover{
+        -webkit-filter: none;
+        filter: none;
+        transition: transform 1s ease-in;  
+    }
+}
+
+.images{ //Transport sites
+    
+    .img-responsive{
+        margin-top: 25px;
+    }
+    
+}
+// ========================================

@@ -78,7 +78,7 @@ $(document).ready(function(){
                     $(this).css({'margin-top' : 0, 'margin-left' : -(videoWidth - windowWidth) / 2 + 'px'});
                 }
 
-                $(this).width(videoWidth).height(videoHeight);
+                $(this).width(videoWidth);
 
                 $('.background-video .video-container video').addClass('fadeIn animated');
 
