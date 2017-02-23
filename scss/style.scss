@@ -24,6 +24,30 @@ html, body{
     font-family: sans-serif;
 }
 
+// ===========================================
+
+/* Fullscreen Background */
+
+body{
+    margin: 0;
+    background-image: url(../images/city-lights-2.jpg);
+    background-size: 100% auto;
+    padding-bottom: 50%;
+    background-position: center center;
+    background-repeat:  no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: -1010;
+    
+    
+    
+}
+
+// ===========================================
+
 /* Background Video */
 
 .marginBottom-0{
@@ -183,7 +207,7 @@ section .container{
     position: absolute;
     right: 50%;
     top: 100%;
-    z-index: -9999999;
+    z-index: -999;
 }
 
 /* Footer */
@@ -235,20 +259,37 @@ section .container{
 /* Gallery */
 
 
-.gallery{
-    .img-responsive{
+.img-box{
+    margin: 10px;
+    width: 350px;
+    height: 250px;
+    overflow: hidden;
 
-        margin-top: 25px;
+    
+    img{
+        margin-left: -15px;
         -webkit-filter: grayscale(80%); /* Safari */
         filter: grayscale(80%);
+        width: 350px;;
+        height: 100%;
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        -ms-transition: all 1s ease;
+        transition: all 1s ease;
     }
-
-    .img-responsive:hover{
+    
+    img:hover{
         -webkit-filter: none;
         filter: none;
-        transition: transform 1s ease-in;  
+//        width: 450px;
+//        height: 350px;
+        -webkit-transform: scale(1.32) rotate(15deg);
+        transform: scale(1.32) rotate(15deg);
     }
 }
+
+
 
 .images{ //Transport sites
     
