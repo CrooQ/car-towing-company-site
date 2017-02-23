@@ -84,8 +84,42 @@ $(document).ready(function(){
 
 
             });
-        }    
+        }  
+    
+    // ================
 
 
+
+    // GALLERY FULL SCREEN
+    // =========================== 
+
+    var img = $('.gallery img');
+    var body = $('body');
+    //console.log(img, body);
+
+    img.each(function(){
+        $(this).on('click', function(){
+            //console.log('click');
+            var src = $(this).attr('src');
+            console.log(src);
+            var newDiv = $('<div>');
+            newDiv.addClass('fullScreen');
+            var imgFs = $('<img>');
+            imgFs.addClass('animate');
+            imgFs.attr('src', src);
+            
+            newDiv.append(imgFs);
+            body.append(newDiv);
+            $('.animate').animate({maxHeight:'80%'},1000);
+            
+            
+               
+            
+            newDiv.on('click', function(){
+                $('.animate').animate({maxHeight:'0'},1000);
+                newDiv.remove();
+            })
+        })
+    })
     
 }(jQuery);
