@@ -15,4 +15,4 @@ Pierwszy projekt non-profit stowrzony dla firmy SIGNALEN, branża: motoyzacja - 
 
 #### Tymczasowy link do podglądu strony
 
-[Podgląd](https://signalen.uzit.pl).
+[Podgląd](http://signalen.uzit.pl).
