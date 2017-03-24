@@ -1,7 +1,7 @@
 <?php
 
-define( 'ADMIN_EMAIL', 'cr00q.pl@gmail.com' );
-define( 'ADMIN_NAME', 'Grzegorz Kruk' );
+define( 'ADMIN_EMAIL', '************' );
+define( 'ADMIN_NAME', '***********' );
 
 //Jaka metoda zaladowlismy plik mailSender.php
 if( $_SERVER['REQUEST_METHOD'] === 'POST' ){
@@ -28,13 +28,13 @@ if( $_SERVER['REQUEST_METHOD'] === 'POST' ){
     $mail->IsSMTP();                // Sets up a SMTP connection  
     $mail->SMTPAuth = true;         // Connection with the SMTP does require authorization    
     $mail->SMTPSecure = "ssl";      // Connect using a TLS connection  
-    $mail->Host = "ssl0.ovh.net";  //Gmail SMTP server address
+    $mail->Host = "************";  //Gmail SMTP server address
     $mail->Port = 465;  //Gmail SMTP port
 //    $mail->Encoding = '7bit';
 
     // Authentication  
-    $mail->Username   = "kontakt@uzit.pl"; // Your full Gmail address
-    $mail->Password   = "Cr00qCr00q"; // Your Gmail password
+    $mail->Username   = "*************"; // Your full Gmail address
+    $mail->Password   = "************"; // Your Gmail password
 
     $mail->setFrom( $email );
     $mail->addAddress( ADMIN_EMAIL, ADMIN_NAME );
