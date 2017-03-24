@@ -1,7 +1,7 @@
 <?php
 
-define( 'ADMIN_EMAIL', 'cr00q.pl@gmail.com' );
-define( 'ADMIN_NAME', 'Grzegorz Kruk' );
+define( 'ADMIN_EMAIL', 'signalen@onet.pl' );
+define( 'ADMIN_NAME', 'Marcin Kruk' );
 
 //Jaka metoda zaladowlismy plik mailSender.php
 if( $_SERVER['REQUEST_METHOD'] === 'POST' ){
