@@ -13,6 +13,6 @@ Strona dla firmy SIGNALEN (pomoc drogowa)
  
  Pierwszy projekt non-profit stowrzony dla firmy SIGNALEN, branża: motoyzacja - pomoc drogowa.
 
- #### Tymczasowy link do podglądu strony
+ #### Link do podglądu strony
   		  
  [Podgląd (http://signalen.uzit.pl)](http://signalen.uzit.pl)
