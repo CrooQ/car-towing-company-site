@@ -84,82 +84,104 @@
                     <div class='col-lg-12'>
                        <h1>Kontakt:</h1>
                     </div>
-                </div>
+                </div> <!-- End row -->
                 
                 <div class='row'>
-                    
-                    <?php if( isset( $_GET['mode']) && isset($_GET['msg']) ){ ?>
-                    <div class="message-alert <?php echo $_GET['mode']; ?>">
-                        <?php echo $_GET['msg']; ?>
-                    </div>
-                    <?php } ?>
                                            
-                    <form id="contact-form" method="post" action="contact.php" role="form">
+                    <form id='contact-form' method='post' action='contact.php' role='form'>
                             
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="form_name">Imię *</label>
-                                    <input id="form_name" type="text" name="name" class="form-control" placeholder="Tutaj wpisz swoje imię *" required="required" data-error="Musisz podać swoje imię.">
-                                    <div class="help-block with-errors"></div>
+                        <div class='col-md-6'>
+                            <div class='form-group'>
+                                <label for='form_name'>Imię *</label>
+                                <div class='input-group'> <span class='input-group-addon'><i class='glyphicon glyphicon-user'></i></span>
+                                    <input id='form_name' type='text' name='name' class='form-control' placeholder='Tutaj wpisz swoje imię *' required='required' data-error='Musisz podać swoje imię.'>
                                 </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="form_lastname">Nazwisko *</label>
-                                    <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Tutaj wpisz swoje nazwisko *" required="required" data-error="Musisz podać swoje nazwisko.">
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                            </div>
-                            </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="form_email">Email *</label>
-                                    <input id="form_email" type="email" name="email" class="form-control" placeholder="Tutaj wpisz swój e-mail *" required="required" data-error="Musisz podać swój e-mail.">
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="form_phone">Telefon</label>
-                                    <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="Tutaj wpisz swój numer telefonu">
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                            </div>
-                        </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="form_message">Temat *</label>
-                                <input id="form_subject" name="subject" class="form-control" placeholder="Tutaj wpsz wiadomość do nas *" required="required" data-error="Tutaj wpisz temat wiadomości"></input>
-                                <div class="help-block with-errors"></div>
-                            </div>
-                        </div>
-                    </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label for="form_message">Wiadomość *</label>
-                                    <textarea id="form_message" name="message" class="form-control" placeholder="Tutaj wpisz wiadomość do nas *" rows="4" required="required" data-error="Pole wiadomości nie może być puste"></textarea>
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <input type="submit" class="btn btn-primary btn-send" value="Wyślij wiadomość">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <p class="text-muted"><strong>*</strong> Pola wymagane.</p>
+                                
+                                <div class='help-block with-errors'></div>
+                                
                             </div>
                         </div>
                             
-                        </form>
-                        
-                    </div>
+                        <div class='col-md-6'>
+                            <div class='form-group'>
+                                <label for='form_lastname'>Nazwisko *</label>
+                                <div class='input-group'> <span class='input-group-addon'><i class='glyphicon glyphicon-user'></i></span>
+                                    <input id='form_lastname' type='text' name='surname' class='form-control' placeholder='Tutaj wpisz swoje nazwisko *' required='required' data-error='Musisz podać swoje nazwisko.'>
+                                </div>
+                                
+                                <div class='help-block with-errors'></div>
+                                
+                            </div>
+                        </div>
+                
+                        <div class='col-md-6'>
+                            <div class='form-group'>
+                                <label for='form_email'>Email *</label>
+                                <div class='input-group'> <span class='input-group-addon'><i class='glyphicon glyphicon-envelope'></i></span>
+                                    <input id='form_email' type='email' name='email' class='form-control' placeholder='Tutaj wpisz swój e-mail *' required='required' data-error='Musisz podać swój e-mail.'>
+                                </div>
+                                    
+                                <div class='help-block with-errors'></div>
+                                
+                            </div>
+                        </div>
+                            
+                        <div class='col-md-6'>
+                            <div class='form-group'>
+                                <label for='form_phone'>Telefon</label>
+                                <div class='input-group'> <span class='input-group-addon'><i class='glyphicon glyphicon-earphone'></i></span>
+                                    <input id='form_phone' type='tel' name='phone' class='form-control' placeholder='Tutaj wpisz swój numer telefonu'>
+                                </div>
+                                
+                                <div class='help-block with-errors'></div>
+                                
+                            </div>
+                        </div>
                     
-                </div>
-            </div>
+                        <div class='col-md-12'>
+                            <div class='form-group'>
+                                <label for='form_message'>Temat *</label>
+                                <div class='input-group'> <span class='input-group-addon'><i class='glyphicon glyphicon-tag'></i></span>
+                                <input id='form_subject' name='subject' class='form-control' placeholder='Tutaj wpisz wiadomość do nas *' required='required' data-error='Tutaj wpisz temat wiadomości'>
+                                </div>
+                                <div class='help-block with-errors'></div>
+                            </div>
+                        </div>
+                
+                        <div class='col-md-12'>
+                            <div class='form-group'>
+                                <label for='form_message'>Wiadomość *</label>
+                                <div class='input-group'> <span class='input-group-addon'><i class='glyphicon glyphicon-comment'></i></span>
+                                    <textarea id='form_message' name='message' class='form-control' placeholder='Tutaj wpisz wiadomość do nas *' rows='4' required='required' data-error='Pole wiadomości nie może być puste'></textarea>
+                                </div>
+                                    
+                                <div class='help-block with-errors'></div>
+                                
+                            </div>
+                        </div>
+                            
+                        <div class='col-md-12'>
+                            <input type='submit' class='btn btn-primary btn-send' value='Wyślij wiadomość'>
+                        </div>
+                    
+                        <div class='col-md-12'>
+                            <p class='text-muted'><strong>*</strong> Pola wymagane.</p>
+                        </div>
+                            
+                        <div class='alert alert-success' role='alert' id='success_message'>
+                            <strong>Gratulacje!</strong> <i class='glyphicon glyphicon-thumbs-up'></i> Twoja wiadomość została wysłana prawidłowo.
+                        </div>
+                        
+                        <div class='alert alert-danger' role='alert' id='error_message'>
+                            <strong>Niepowodzenie!</strong> <i class='glyphicon glyphicon-thumbs-down'></i> Wystąpił problem przy wysyłaniu widomości. <br> Prosimy spróbować później.
+                        </div>
+                    
+                    </form> <!-- End form -->
+                        
+                </div> <!-- End row -->
+                    
+            </div> <!-- End container -->
+            
 
         </section>
 

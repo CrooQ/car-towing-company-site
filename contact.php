@@ -1,6 +1,6 @@
 <?php
 
-define( 'ADMIN_EMAIL', 'signalen@onet.pl' );
+define( 'ADMIN_EMAIL', 'kontakt.signalen@gmail.com' );
 define( 'ADMIN_NAME', 'Marcin Kruk' );
 
 //Jaka metoda zaladowlismy plik mailSender.php
@@ -9,7 +9,7 @@ if( $_SERVER['REQUEST_METHOD'] === 'POST' ){
     //Zaladowanie biblioteki PHPMailer
     require_once 'PHPMailer/PHPMailerAutoload.php';
 
-    //Walidacja pol formularza
+    //Walidacja pól formularza
     $name = isset( $_POST['name'] ) ? trim($_POST['name']) : '';    
     $surname = isset( $_POST['surname'] ) ? trim($_POST['surname']) : '';    
     $email = isset( $_POST['email'] ) ? trim($_POST['email']) : '';    
@@ -18,7 +18,7 @@ if( $_SERVER['REQUEST_METHOD'] === 'POST' ){
     $message = isset( $_POST['message'] ) ? trim($_POST['message']) : '';
 
     if( !empty($name) && !empty($surname) && !empty($email) && !empty($subject) && !empty($message) ){
-        $subject = "Formularz ze strony SIGNALEN - $subject";
+        $subject = "Wiadomość ze strony SIGNALEN - Pomoc Drogowa: $subject";
         $message = "Wiadomość od $name $surname ($email, $phone)<br>Treść wiadomości:<br> $message";
     }
 
@@ -33,8 +33,8 @@ if( $_SERVER['REQUEST_METHOD'] === 'POST' ){
 //    $mail->Encoding = '7bit';
 
     // Authentication  
-    $mail->Username   = "kontakt@uzit.pl"; // Your full Gmail address
-    $mail->Password   = "Cr00qCr00q"; // Your Gmail password
+    $mail->Username   = "mailing-signalen@uzit.pl"; // Your full Gmail address
+    $mail->Password   = "**************"; // Your Gmail password
 
     $mail->setFrom( $email );
     $mail->addAddress( ADMIN_EMAIL, ADMIN_NAME );
@@ -52,5 +52,7 @@ if( $_SERVER['REQUEST_METHOD'] === 'POST' ){
         $mode = 'success';
     }
 
-    header( 'Location: kontakt.html?msg='. $msg . '&mode='. $mode );
+    header( 'Location: kontakt.html?msg='. $mode . '&mode='. $msg );
+    
+    
 }
